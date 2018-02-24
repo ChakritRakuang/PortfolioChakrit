@@ -1,0 +1,45 @@
+<section id="contacts" class="contact" data-content="contact">
+    <script type="text/javascript">
+        $(function () {
+            _scrollControl = new ScrollControler();
+            _contactForm = new ContactForm();
+        });
+    </script>
+    <div class="base">
+        <h2>Contact<span> me</span></h2>
+        <div class="network">
+            <a onclick="javascript:ga('send', 'event', 'Contactos', 'LinkedIn');" href="https://www.linkedin.com/in/gcardosojavascript" target="_blank" class="in" title="LinkedIn profile"><i class="icon-linkedin"></i></a>
+            <a onclick="javascript:ga('send', 'event', 'Contactos', 'Skype');" href="skype:gcardoso89" class="sk" title="Skype"><i class="icon-skype"></i></a>
+            <a onclick="javascript:ga('send', 'event', 'Contactos', 'Email');" href="mailto:goncalo.cb.ferreira@gmail.com" class="em" title="Email"><i class="icon-mail"></i></a>
+            <a onclick="javascript:ga('send', 'event', 'Contactos', 'Download CV');" href="docs/GoncaloCardoso_CV_2017_EN.pdf" target="_blank" class="cv" title="CV"><i class="icon-cv"></i></a>
+            <a onclick="javascript:ga('send', 'event', 'Contactos', 'Twitter');" href="http://twitter.com/goncalocardo_o" target="_blank" class="fb" title="Twitter"><i class="icon-twitter"></i></a>
+            <form autocomplete="off">
+                <div class="form">
+                    <h3>Write me something</h3>
+                    <input name="token" type="hidden" value="{{token}}"/>
+                    <input type="hidden" name="country" value="{{country}}" />
+                    <div class="ln">
+                        <label for="nameFieldInput" id="nameFieldLabel">Name</label>
+                        <input name="name" type="text" placeholder="Name" id="nameFieldInput" />
+                        <div class="err"></div>
+                    </div>
+                    <div class="ln">
+                        <label for="emailFieldInput" id="emailFieldLabel">Email</label>
+                        <input name="email" type="text" placeholder="Email" id="emailFieldInput" />
+                        <div class="err"></div>
+                    </div>
+                    <div class="ln">
+                        <label for="messageFieldTextarea" id="messageFieldLabel">Message</label>
+                        <textarea name="message" type="text" placeholder="Message" id="messageFieldTextarea"></textarea>
+                        <div class="err"></div>
+                    </div>
+                    <input type="submit" id="formSubmitButton" value="Send" />
+                </div>
+                <div class="success-block">
+                    <div><em>Thank you!</em><span>We'll be in touch</span></div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
